@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr" class="light" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="fr">Mon CV</title>
+    <title data-lang="de" style="display: none;">Mein Lebenslauf</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        };
+    </script>    
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init();
+        });
+    </script>
+
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900 transition-colors duration-300 light:bg-gray-100 light:text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+    <div class="max-w-4xl mx-auto my-6 p-4 sm:my-10 sm:p-6 bg-white shadow-lg rounded-lg light:bg-white dark:bg-gray-800 dark:shadow-gray-700">
+        <!-- Navigation -->
+        <details class="sm:hidden">
+            <summary class="cursor-pointer text-gray-600 hover:text-blue-700">Menu</summary>
+
+            <button onclick="toggleTheme()" class="w-8 h-8">
+                <img id="theme-icon" src="Images/sun.jpg" alt="Changer de thème" class="w-full h-full">
+            </button>
+
+            <div class="flex flex-col space-y-2 mt-2">
+                <a href="CV.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="fr">
+                    CV
+                </a>
+                <a href="info_persos.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="fr">
+                    À propos
+                </a>
+                <a href="grid.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="fr">
+                    Informations Supplémentaires
+                </a>
+                <a href="CV.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="de" style="display: none;">
+                    Lebenslauf
+                </a>
+                <a href="info_persos.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="de" style="display: none;">
+                    Über mich
+                </a>
+                <a href="grid.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="de" style="display: none;">
+                    Zusätzliche Informationen
+                </a>
+            </div>
+            <div class="flex items-center space-x-2">
+                <a href="#" onclick="switchLanguage('fr')">
+                    <img src="Images/France.png" alt="Français" class="w-6 h-6">
+                </a>
+                <a href="#" onclick="switchLanguage('de')">
+                    <img src="Images/Deutschand.jpeg" alt="Deutsch" class="w-6 h-6">
+                </a>
+            </div>
+        </details>
+
+        <nav class="hidden space-x-4 sm:flex justify-center border-b border-gray-300 mb-4 sm:mb-6">
+
+            <button onclick="toggleTheme()" class="w-8 h-8">
+                <img id="theme-icon" src="Images/sun.jpg" alt="Changer de thème" class="w-full h-full">
+            </button>
+
+            <a href="CV.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="fr">
+                CV
+            </a>
+            <a href="info_persos.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="fr">
+                À propos
+            </a>
+            <a href="grid.html?lang=fr" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="fr">
+                Informations Supplémentaires
+            </a>
+            <a href="CV.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="de" style="display: none;">
+                Lebenslauf
+            </a>
+            <a href="info_persos.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="de" style="display: none;">
+                Über mich
+            </a>
+            <a href="grid.html?lang=de" class="text-sm text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-700" data-lang="de" style="display: none;">
+                Zusätzliche Informationen
+            </a>
+
+            <div class="flex items-center space-x-2">
+                <a href="#" onclick="switchLanguage('fr')">
+                    <img src="Images/France.png" alt="Français" class="w-6 h-6">
+                </a>
+                <a href="#" onclick="switchLanguage('de')">
+                    <img src="Images/Deutschand.jpeg" alt="Deutsch" class="w-6 h-6">
+                </a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4 sm:p-6 bg-white shadow-lg rounded-lg light:bg-white dark:bg-gray-800 dark:shadow-gray-700">
+            <!-- About Me Section -->
+            <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow grid-cols-1 md:grid-cols-2 md:col-span-2 light:bg-gray-50 dark:bg-gray-800 dark:shadow-gray-700" style="background-image: url('Images/courrir.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;" data-aos="fade-up">
+                <div class="bg-white bg-opacity-80 p-4 rounded-lg light:bg-white dark:bg-gray-800 dark:bg-opacity-80">
+                    <div class="flex items-center">
+                        <img src="Images/silhouette.png" alt="silhouette" class="h-6 w-6 mr-2">
+                        <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 flex items-center light:text-gray-900 dark:text-gray-100" data-lang="fr">
+                            À propos de moi
+                        </h2>
+                        <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 flex items-center light:text-gray-900 dark:text-gray-100" data-lang="de" style="display: none;">
+                            Über mich
+                        </h2>
+                    </div>
+                    <p class="mt-4 text-gray-700 leading-relaxed light:text-gray-700 dark:text-gray-300" data-lang="fr">
+                        Je m'appelle Faivre Pablo, j'ai 18 ans et je suis étudiant en informatique. 
+                        Je suis né à Delmenhorst en Allemagne et j'ai rapidement appris l'anglais dans une école allemande et anglaise. 
+                        Je vis en France depuis 2017, où je suis entré dans une école internationale. 
+                        J'ai passé mon collège et mon lycée dans cette école et j'ai obtenu mon ABIBAC avec mention très bien. 
+                        J'aime beaucoup l'informatique, que je pratique depuis la seconde en NSI, ou j'ai appris la programmation en python, le HTML et le SQL. 
+                        Je suis passionné par le développement web et python depuis, ce qui ma poussé à intégrer l'ISFATES pour ma liscence.
+                        J'y apprend le C et le Wordpress, et j'y ammeliore mes compétences en python et en développement web.
+                        J'aime apprendre de nouvelles choses et relever des défis. 
+                        Je suis également un sportif, j'aime le triathlon et l'aviron. 
+                    </p>
+                    <p class="mt-4 text-gray-700 leading-relaxed light:text-gray-700 dark:text-gray-300" data-lang="de" style="display: none;">
+                        Mein Name ist Faivre Pablo, ich bin 18 Jahre alt und Informatikstudent. 
+                        Ich wurde in Delmenhorst, Deutschland, geboren und habe schnell Englisch in einer deutschen und englischen Grundschule gelernt. 
+                        Seit 2017 lebe ich in Frankreich, wo ich eine internationale Schule besucht habe. 
+                        Ich habe meine restliche Schulzeit dort verbracht und mein ABIBAC mit Auszeichnung bestanden. 
+                        Ich interessiere mich sehr für Informatik, die ich seit der Oberstufe in NSI praktiziere, wo ich Programmierung in Python, HTML und SQL gelernt habe. 
+                        Ich bin leidenschaftlich am Web- und Python-Entwicklung interessiert, was mich dazu gebracht hat, mich für das ISFATES für meinen Bachelor einzuschreiben.
+                        Dort lerne ich C und Wordpress und verbessere meine Fähigkeiten in Python und Webentwicklung.
+                        Ich liebe es, neue Dinge zu lernen und Herausforderungen anzunehmen. 
+                        Außerdem bin ich sportlich aktiv und liebe Triathlon und Rudern. 
+                    </p>
+                </div>
+            </section>
+
+        
+            <!-- Hobbies Section -->
+            <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow grid-cols-1 md:grid-cols-2 md:col-span-2 light:bg-gray-50 dark:bg-gray-800 dark:shadow-gray-700" style="background-image: url('Images/velo.jpg'); background-size: cover; background-position: center;" data-aos="fade-up">
+                <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 flex items-center bg-white bg-opacity-80 p-2 rounded-md light:bg-white dark:bg-gray-800 dark:bg-opacity-80" data-lang="fr">
+                    <span class="material-icons text-blue-500 mr-2">🔥</span> Mes Hobbies
+                </h2>
+                <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 flex items-center bg-white bg-opacity-80 p-2 rounded-md light:bg-white dark:bg-gray-800 dark:bg-opacity-80" data-lang="de" style="display: none;">
+                    <span class="material-icons text-blue-500 mr-2">🔥</span> Meine Hobbys
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                    <!-- Hobby 1 -->
+                    <div class="p-4 bg-white bg-opacity-80 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-white dark:bg-gray-800 dark:bg-opacity-80">
+                        <div class="flex items-center mb-2">
+                            <span class="material-icons text-blue-500 mr-2"><img src="Images/coder.png" alt="Coder" class="h-6 w-6"></span>
+                            <h3 class="text-lg font-semibold light:text-gray-900 dark:text-gray-100" data-lang="fr">Coder</h3>
+                            <h3 class="text-lg font-semibold light:text-gray-900 dark:text-gray-100" data-lang="de" style="display: none;">Coden</h3>
+                        </div>
+                        <p class="text-gray-700 light:text-gray-700 dark:text-gray-300" data-lang="fr">
+                            J'aime créer des projets personnels en développement web et en python. 
+                            Pour en découvrir plus, allez voir sur la page Informations Supplémentaires.
+                        </p>
+                        <p class="text-gray-700 light:text-gray-700 dark:text-gray-300" data-lang="de" style="display: none;">
+                            Ich liebe es, persönliche Projekte in der Webentwicklung und in Python zu erstellen. 
+                            Um mehr zu erfahren, besuchen Sie die Seite Zusätzliche Informationen.
+                        </p>
+                    </div>
+                    <!-- Hobby 2 -->
+                    <div class="p-4 bg-white bg-opacity-80 rounded-lg shadow-md hover:shadow-lg transition-shadow light:bg-white dark:bg-gray-800 dark:bg-opacity-80">
+                        <div class="flex items-center mb-2">
+                            <span class="material-icons text-blue-500 mr-2"><img src="Images/book.jpeg" alt="livre" class="w-6 h-6"></span>
+                            <h3 class="text-lg font-semibold light:text-gray-900 dark:text-gray-100" data-lang="fr">Lecture</h3>
+                            <h3 class="text-lg font-semibold light:text-gray-900 dark:text-gray-100" data-lang="de" style="display: none;">Lesen</h3>
+                        </div>
+                        <p class="text-gray-700 light:text-gray-700 dark:text-gray-300" data-lang="fr">
+                            J'aime lire des livres de science-fiction et de fantasy. 
+                            J'ai lu des séries comme Harry Potter, Percy Jackson, Eragon et bien d'autres.
+                        </p>
+                        <p class="text-gray-700 light:text-gray-700 dark:text-gray-300" data-lang="de" style="display: none;">
+                            Ich lese gerne Science-Fiction- und Fantasy-Bücher. 
+                            Ich habe Serien wie Harry Potter, Percy Jackson, Eragon und viele andere gelesen.
+                        </p>
+                    </div>
+                    <!-- Hobby 3 -->
+                    <div class="p-4 bg-white bg-opacity-80 rounded-lg shadow-md hover:shadow-lg transition-shadow sm:col-span-2 light:bg-white dark:bg-gray-800 dark:bg-opacity-80">
+                        <div class="flex items-center mb-2">
+                            <span class="material-icons text-blue-500 mr-2"><img src="Images/run.jpeg" alt="running" class="w-6 h-6"></span>
+                            <h3 class="text-lg font-semibold light:text-gray-900 dark:text-gray-100">Sport</h3>
+                        </div>
+                        <p class="text-gray-700 light:text-gray-700 dark:text-gray-300" data-lang="fr">
+                            Je suis un passionné de triathlon, et j'ai réussi à atteindre les championnats de France d'aquathlon. 
+                            De plus, je suis investi dans le sport à l'école avec l'UNSS et je me suis qualifié aux championnats de France d'aviron indoor.
+                        </p>
+                        <p class="text-gray-700 light:text-gray-700 dark:text-gray-300" data-lang="de" style="display: none;">
+                            Ich bin ein begeisterter Triathlet und habe es geschafft, die französischen Meisterschaften im Aquathlon zu erreichen. 
+                            Außerdem bin ich in der Schule sportlich aktiv mit der UNSS und habe mich für die französischen Meisterschaften im Indoor-Rudern qualifiziert.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Goals Section -->
+            <section class="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow md:col-span-2 lg:col-span-4 light:bg-gray-50 dark:bg-gray-800 dark:shadow-gray-700" data-aos="fade-up">
+                <div class="flex items-center">
+                    <img src="Images/chercher.jpeg" alt="Chercher" class="h-6 w-6 mr-2">
+                    <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 flex items-center light:text-gray-900 dark:text-gray-100" data-lang="fr">
+                        Ce que je cherche
+                    </h2>
+                    <h2 class="text-xl sm:text-2xl font-semibold border-b pb-2 flex items-center light:text-gray-900 dark:text-gray-100" data-lang="de" style="display: none;">
+                        Was ich suche
+                    </h2>
+                </div>
+                <p class="mt-4 text-gray-700 leading-relaxed light:text-gray-700 dark:text-gray-300" data-lang="fr">
+                    Je suis à la recherche d'une opportunité pour développer mes compétences en Développement Web ou en programmation Impérative, 
+                    intégrer une équipe dynamique, Française ou Allemande et travailler sur des projets innovants.
+                </p>
+                <p class="mt-4 text-gray-700 leading-relaxed light:text-gray-700 dark:text-gray-300" data-lang="de" style="display: none;">
+                    Ich suche eine Gelegenheit, meine Fähigkeiten in der Webentwicklung oder in der imperativen Programmierung weiterzuentwickeln, 
+                    in ein dynamisches Team, sei es in Frankreich oder Deutschland, einzutreten und an innovativen Projekten zu arbeiten.
+                </p>
+            </section>
+        </div>
+    </div>
+
+     <!-- Footer -->
+     <footer class="bg-gray-800 text-white py-4 mt-6 light:bg-gray-800 dark:bg-gray-900">
+        <div class="max-w-4xl mx-auto text-center text-sm light:text-white dark:text-gray-300" data-lang="fr">
+            &copy; 2025 Mon Portfolio. Tous droits réservés.<br/>
+            Scrollez vers le bas pour acceder a la prochaine page.
+        </div>
+        <div class="max-w-4xl mx-auto text-center text-sm light:text-white dark:text-gray-300" data-lang="de" style="display: none;">
+            &copy; 2025 Mein Portfolio. Alle Rechte vorbehalten.<br/>
+            Scrollen sie nach unten um zur nächsten seite zu gelangen
+        </div>
+    </footer>
+
+    <div id="next-page-message" data-lang="fr">
+        Aller sur la prochaine page...
+    </div>
+    <div id="next-page-message" data-lang="de" style="display: none;">
+        Gehe zur nächsten Seite...
+    </div>
+
+</body>
+</html>
